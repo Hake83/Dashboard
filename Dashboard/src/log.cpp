@@ -17,7 +17,7 @@ bool init_log()
 
 bool gl_log(const std::string& text, int v[2])
 {
-	std::ofstream log_file(GL_LOG_FILE, std::ios_base::out);
+	std::ofstream log_file(GL_LOG_FILE, std::ios::out | std::ios_base::app);
 	if (!log_file.is_open())
 	{
 		std::cout << "Error opening the log file" << std::endl;
@@ -34,7 +34,7 @@ bool gl_log(const std::string& text, int v[2])
 
 bool gl_log(const std::string& text, int v)
 {
-	std::ofstream log_file(GL_LOG_FILE, std::ios_base::out);
+	std::ofstream log_file(GL_LOG_FILE, std::ios::out | std::ios_base::app);
 	if (!log_file.is_open())
 	{
 		std::cout << "Error opening the log file" << std::endl;
@@ -50,7 +50,7 @@ bool gl_log(const std::string& text, int v)
 
 bool gl_log(const std::string& text, const GLubyte* message)
 {
-	std::ofstream log_file(GL_LOG_FILE, std::ios_base::out);
+	std::ofstream log_file(GL_LOG_FILE, std::ios::out | std::ios_base::app);
 	if (!log_file.is_open())
 	{
 		std::cout << "Error opening the log file" << std::endl;
@@ -66,7 +66,7 @@ bool gl_log(const std::string& text, const GLubyte* message)
 
 bool gl_log(const GLubyte* message)
 {
-	std::ofstream log_file(GL_LOG_FILE, std::ios_base::out);
+	std::ofstream log_file(GL_LOG_FILE, std::ios::out | std::ios_base::app);
 	if (!log_file.is_open())
 	{
 		std::cout << "Error opening the log file" << std::endl;
@@ -81,7 +81,7 @@ bool gl_log(const GLubyte* message)
 
 bool gl_log(const std::string& text)
 {
-	std::ofstream log_file(GL_LOG_FILE, std::ios_base::out);
+	std::ofstream log_file(GL_LOG_FILE, std::ios::out | std::ios_base::app);
 	if (!log_file.is_open())
 	{
 		std::cout << "Error opening the log file" << std::endl;

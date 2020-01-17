@@ -10,5 +10,6 @@
 #include <glfw3.h>
 
 #include "log.h"
+#include "maths_funcs.h"
 
 void processInput(GLFWwindow* window);
